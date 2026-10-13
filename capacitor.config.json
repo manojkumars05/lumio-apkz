@@ -3,6 +3,7 @@
   "appName": "Lumio",
   "webDir": "www",
   "server": {
+    "url": "https://manojkumars05.github.io/lumio/",
     "androidScheme": "https"
   }
 }
