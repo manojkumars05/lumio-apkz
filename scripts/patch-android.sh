@@ -22,6 +22,8 @@ public class MainActivity extends BridgeActivity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    // always load fresh website files on app start (no stale CSS/JS)
+    getBridge().getWebView().clearCache(true);
     getBridge().getWebView().setDownloadListener((url, userAgent, contentDisposition, mimeType, length) -> {
       try {
         String name = URLUtil.guessFileName(url, contentDisposition, mimeType);
