@@ -15,3 +15,8 @@ APK: android/app/build/outputs/apk/debug/app-debug.apk
 ## IMPORTANT - Firebase
 Firebase console -> Authentication -> Settings -> Authorized domains -> add `localhost`
 (app https://localhost-la run aagum; illana login work aagaadhu).
+
+## App-la website changes / new features varalana
+- App = https://manojkumars05.github.io/lumio/ site-ah load pannum (capacitor.config.json -> server.url). Website-ah GitHub Pages la update pannina, app-la 10 min la varum.
+- Back button, download maari NATIVE features-ku APK-ah rebuild pannitu, pazhaya app uninstall panni, puthu APK install pannanum.
+- Innum varalana: Phone Settings -> Apps -> Lumio -> Storage -> Clear cache.
