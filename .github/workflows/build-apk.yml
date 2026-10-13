@@ -3,6 +3,8 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +18,9 @@ jobs:
       - run: npx cap add android
       - run: npx cap sync android
       - run: cd android && chmod +x gradlew && ./gradlew assembleDebug
-      - uses: actions/upload-artifact@v4
+      - run: cp android/app/build/outputs/apk/debug/app-debug.apk lumio.apk
+      - uses: softprops/action-gh-release@v2
         with:
-          name: lumio-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          tag_name: latest
+          name: Lumio APK
+          files: lumio.apk
